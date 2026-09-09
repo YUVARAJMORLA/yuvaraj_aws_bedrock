@@ -87,3 +87,59 @@ python llama4.py
 ```
 
 
+## Applications
+
+This repository contains three separate AWS Bedrock applications. They are independent of each other and can be run separately.
+
+### `app.py` — RAG Application
+
+`app.py` is the **RAG (Retrieval-Augmented Generation) application**. It uses AWS Bedrock along with a knowledge source to retrieve relevant information and generate responses based on the retrieved content.
+
+This application can be run independently and does not depend on `llama.py` or `nova.py`.
+
+### `llama.py` — Llama Chat Application
+
+`llama.py` is a **standalone chat application** using Meta Llama models through AWS Bedrock.
+
+It is a normal conversational application and is **not connected to the RAG application in `app.py`**. It can be run independently.
+
+The implementation uses the newer AWS Bedrock APIs and approaches rather than following the original project's `InvokeModel` implementation directly.
+
+### `nova.py` — Amazon Nova Chat Application
+
+`nova.py` is another **standalone chat application**, this time using Amazon Nova through AWS Bedrock.
+
+It is also independent of `app.py` and can be run as a separate application.
+
+In short:
+
+```text
+app.py
+   └── RAG Application
+       └── Can run independently
+
+
+llama.py
+   └── Llama Chat Application
+       └── Can run independently
+
+
+nova.py
+   └── Amazon Nova Chat Application
+       └── Can run independently
+```
+
+## Reference
+
+This project was developed independently using AWS Bedrock documentation, tutorials, and open-source projects as references for learning and implementation ideas.
+
+The AWS Bedrock project by **Krish Naik** was used as one of the references while learning AWS Bedrock concepts and implementation approaches:
+
+* GitHub: https://github.com/krishnaik06/AWS-Bedrock
+* YouTube Playlist: https://youtube.com/playlist?list=PLZoTAELRMXVP5zpBfH7pab4aB1LbmCM1z
+
+The original GitHub repository is licensed under **GPL-3.0**.
+
+This implementation has been substantially rewritten and adapted, including changes to the application structure, models, AWS Bedrock APIs, and overall implementation. It also uses newer approaches such as the **Converse API** for supported models instead of directly following the original `InvokeModel` approach.
+
+The references above are included for transparency and to acknowledge the resources used during the learning and development process.
