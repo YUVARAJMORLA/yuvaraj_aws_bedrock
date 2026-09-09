@@ -1,0 +1,31 @@
+# AWS SDK & Bedrock Runtime
+boto3==1.43.89
+awscli==1.46.1
+aws_sdk_bedrock_runtime==0.1.1
+aws-sdk-signers==0.1.0
+smithy-aws-core==0.1.1
+
+# Web App Interface
+streamlit==1.63.0
+
+# LangChain & Vector Store (RAG)
+langchain==1.4.0
+langchain-core==1.6.2
+langchain-community==0.4.2
+langchain-aws==1.7.5
+langchain-text-splitters==1.1.2
+faiss-cpu==1.15.0
+
+# Document & Data Parsers
+pypdf==6.18.0
+pymupdf==1.28.2
+python-docx==1.2.0
+python-pptx==1.0.2
+pandas==3.0.5
+openpyxl==3.1.5
+
+# Audio Capture & Playback (Nova Sonic)
+PyAudio==0.2.14
+
+# Configuration & Environment
+python-dotenv==1.2.3

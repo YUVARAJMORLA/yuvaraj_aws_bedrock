@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venev/
+venv/
+.venv/
+env/
+ENV/
+
+# Environment & credentials
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*accesskey*
+*access_key*
+*secret*
+*credential*
+*.pem
+*.key
+
+# Vector stores & temporary files
+faiss_index/
+*.faiss
+*.pkl
+uploads/
+temp/
+*.tmp
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
